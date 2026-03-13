@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.c-btn {
+  font-size: myrem(18);
+  line-height: calc(25 / 18);
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  border: myrem(1) solid $black;
+  display: inline-flex;
+  align-items: center;
+  gap: myrem(8);
+  padding: myrem(4) myrem(15) myrem(9);
+  @include mq(md) {
+  }
+}
+
+.c-btn::after {
+  content: "";
+  display: inline-block;
+  background: url("../images/common/arrow.png") no-repeat center / contain;
+  width: myrem(24.5);
+  height: myrem(5);
+  @include mq(md) {
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
+}
+
+.c-btn:hover::after {
+  @include mq(md) {
+    transform: translateX(myrem(5));
+  }
+}

@@ -1,4 +1,4 @@
-@use 'global' as *;
+@use "global" as *;
 
 .l-inner {
   width: 100%;
@@ -11,4 +11,7 @@
     padding-right: myrem(strip-unit($padding-pc));
     padding-left: myrem(strip-unit($padding-pc));
   }
+  // @media (min-width: 600px) {
+  //   padding-inline: 40px;
+  // }
 }
